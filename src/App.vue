@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import ShowListItem from "./components/ShowListItem.vue";
-import PaymentCard from "./components/PaymentCard.vue";
+import PaymentCheckoutForm from "./components/PaymentCheckoutForm.vue";
 
 const shows = ref([
   {
@@ -14,26 +14,43 @@ const shows = ref([
   },
   {
     id: 2,
-    title: "Craig's Crazy Show",
-    subtitle: "A crazy show done by DJ Craig.",
-    location: "Seattle, WA",
+    title: "DIPLO at the Tacoma Dome",
+    subtitle: "Diplo will be playing at 8:00PM on Saturday, December 10th.",
+    location: "Tacoma, WA",
     price: 300,
     count: ref(0),
   },
   {
     id: 3,
-    title: "Craig's Crazy Show",
-    subtitle: "A crazy show done by DJ Craig.",
+    title: "Local DJ Mixes Poorly",
+    subtitle: "Your local DJ is here to play some crazy mashups in the club!",
     location: "Seattle, WA",
-    price: 300,
+    price: 100,
     count: ref(0),
   },
   {
     id: 4,
-    title: "Craig's Crazy Show",
-    subtitle: "A crazy show done by DJ Craig.",
-    location: "Seattle, WA",
-    price: 300,
+    title: "Taylor Swift",
+    subtitle: "TicketMaster really messed up and now this concert is $4000.00!",
+    location: "New York City, NY",
+    price: 4000,
+    count: ref(0),
+  },
+  {
+    id: 5,
+    title: "Yung Gravy",
+    subtitle:
+      "Yung Gravy is coming to Portland! Buy these tickets before they sell out.",
+    location: "Portland, OR",
+    price: 150,
+    count: ref(0),
+  },
+  {
+    id: 6,
+    title: "PSY",
+    subtitle: "Oppa Gangnam Style...",
+    location: "Seoul, KR",
+    price: 600,
     count: ref(0),
   },
 ]);
@@ -58,8 +75,10 @@ const totalCount = computed(() => {
     </div>
   </header>
   <div class="mt-8">
-    <h2 class="font-bold">SHOWS</h2>
-    <ul>
+    <h2 class="font-bold mb-2">
+      SHOWS <i class="bi bi-calendar4-event ml-1"></i>
+    </h2>
+    <ul class="grid grid-cols-2 gap-x-5 gap-y-3">
       <ShowListItem
         v-for="show in shows"
         :key="show.id"
@@ -68,7 +87,7 @@ const totalCount = computed(() => {
     </ul>
   </div>
   <div class="mt-8">
-    <PaymentCard></PaymentCard>
+    <PaymentCheckoutForm :shows="shows" />
   </div>
 </template>
 

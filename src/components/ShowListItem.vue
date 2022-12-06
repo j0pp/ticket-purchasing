@@ -15,8 +15,8 @@ const decrementCount = () => {
 </script>
 
 <template>
-  <li class="mt-2 flex row bg-violet-900 rounded-md p-2">
-    <div>
+  <li class="flex flex-row bg-indigo-800 rounded-md p-2">
+    <div class="flex-grow">
       <h2 class="text-lg">
         {{ show.title
         }}<span class="ml-2 text-sm text-indigo-300"
@@ -25,9 +25,9 @@ const decrementCount = () => {
       </h2>
       <p class="text-gray-400">{{ show.subtitle }}</p>
     </div>
-    <div class="ml-8 flex flex-col">
+    <div class="flex flex-col">
       <div class="text-center">${{ show.price.toFixed(2) }}</div>
-      <div>
+      <div class="text-center">
         <button @click="decrementCount">
           <i class="bi bi-dash-circle"></i>
         </button>
