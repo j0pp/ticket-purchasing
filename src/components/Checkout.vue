@@ -31,7 +31,7 @@ const total = computed(() => {
 </script>
 
 <template>
-  <div class="w-1/2 p-3">
+  <div class="p-3">
     <h2 class="font-bold">CHECKOUT <i class="bi bi-cart2 text-xl ml-2"></i></h2>
     <div class="flex flex-col" v-if="hasItems">
       <div class="mt-3">
@@ -76,7 +76,7 @@ const total = computed(() => {
         Place Order
       </button>
     </div>
-    <div class="text-center w-96 mx-auto py-4" v-else>
+    <div class="text-center mx-auto py-4" v-else>
       Please add some tickets to your cart to checkout!
     </div>
   </div>

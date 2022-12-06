@@ -78,7 +78,7 @@ const totalCount = computed(() => {
     <h2 class="font-bold mb-2">
       SHOWS <i class="bi bi-calendar4-event ml-1"></i>
     </h2>
-    <ul class="grid grid-cols-2 gap-x-5 gap-y-3">
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-3">
       <ShowListItem
         v-for="show in shows"
         :key="show.id"

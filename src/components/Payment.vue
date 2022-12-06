@@ -6,7 +6,7 @@ import { Show } from "../shared/types";
 </script>
 
 <template>
-  <div class="w-1/2 flex flex-col p-3">
+  <div class="flex flex-col p-3">
     <h2 class="font-bold">
       PAYMENT <i class="bi bi-credit-card-2-front ml-1"></i>
     </h2>

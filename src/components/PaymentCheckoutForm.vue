@@ -8,7 +8,7 @@ defineProps<{ shows: Show[] }>();
 </script>
 
 <template>
-  <form class="flex flex-row">
+  <form class="grid grid-cols-1 md:grid-cols-2">
     <Payment />
     <Checkout :shows="shows" />
   </form>
