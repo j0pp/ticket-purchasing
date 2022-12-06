@@ -72,7 +72,7 @@ const total = computed(() => {
           COVID-19 vaccine doses.
         </p>
       </div>
-      <button class="bg-indigo-800 mt-3 py-3 px-12 rounded-lg">
+      <button type="submit" class="bg-indigo-800 mt-3 py-3 px-12 rounded-lg">
         Place Order
       </button>
     </div>

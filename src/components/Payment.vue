@@ -7,6 +7,7 @@ import { Show } from "../shared/types";
 
 <template>
   <div class="flex flex-col p-3">
+    <fieldset></fieldset>
     <h2 class="font-bold">
       PAYMENT <i class="bi bi-credit-card-2-front ml-1"></i>
     </h2>
@@ -19,6 +20,7 @@ import { Show } from "../shared/types";
           name="cardType"
           autocomplete="cc-type"
           value="visa"
+          checked
         />
         <label for="cardTypeChoice1">
           <img
@@ -49,10 +51,10 @@ import { Show } from "../shared/types";
       id="card-name"
       type="text"
       inputmode="text"
-      pattern="[0-9\s]{13,19}"
       autocomplete="cc-name"
       maxlength="19"
       placeholder="John Doe"
+      required
     />
     <label class="mt-2" for="card-number">Card Number</label>
     <input
@@ -65,6 +67,7 @@ import { Show } from "../shared/types";
       autocomplete="cc-number"
       maxlength="19"
       placeholder="#### #### #### ####"
+      required
     />
     <label class="mt-2" for="security-code">Security Code</label>
     <input
@@ -77,17 +80,16 @@ import { Show } from "../shared/types";
       autocomplete="cc-csc"
       maxlength="3"
       placeholder="###"
+      required
     />
     <label class="mt-2" for="card-exp">Expiration Date</label>
     <input
       class="rounded p-1"
-      id="security-code"
-      type="text"
-      inputmode="numeric"
-      pattern="[0-9\s]{3}"
+      id="exp-date"
+      type="month"
+      placeholder="MM YYYY"
       autocomplete="cc-exp"
-      maxlength="7"
-      placeholder="MM/YYYY"
+      required
     />
     <button type="button" class="bg-sky-500 my-4 mx-16 p-3 rounded">
       Or, use PayPal
