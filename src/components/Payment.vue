@@ -49,6 +49,7 @@ import { Show } from "../shared/types";
     <input
       class="rounded p-1"
       id="card-name"
+      name="cardName"
       type="text"
       inputmode="text"
       autocomplete="cc-name"
@@ -60,6 +61,7 @@ import { Show } from "../shared/types";
     <input
       class="rounded p-1"
       id="card-number"
+      name="cardNumber"
       v-model="cardNumber"
       type="tel"
       inputmode="numeric"
@@ -73,6 +75,7 @@ import { Show } from "../shared/types";
     <input
       class="rounded p-1"
       id="security-code"
+      name="securityCode"
       v-model="cardCSC"
       type="tel"
       inputmode="numeric"
@@ -86,11 +89,13 @@ import { Show } from "../shared/types";
     <input
       class="rounded p-1"
       id="exp-date"
+      name="cardExp"
       type="month"
       placeholder="MM YYYY"
       autocomplete="cc-exp"
       required
     />
+
     <button type="button" class="bg-sky-500 my-4 mx-16 p-3 rounded">
       Or, use PayPal
       <i class="bi bi-paypal"></i>
